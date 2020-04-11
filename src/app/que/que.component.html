@@ -1,0 +1,50 @@
+<div class="container-fluid">
+
+  <div class="row" style="background-color:teal">
+
+    <h1 class="text-center" style="color:white"> {{que2[0].category}} &nbsp;<img src="https://img.icons8.com/clouds/100/000000/ask-question.png"><button class="btn btn-default right" style="background-color:cyan; color:black;margin-left:700px" routerLink="../">Back</button></h1>
+
+
+
+  </div>
+
+
+
+</div>
+
+
+
+<button style="margin-top: 20px" class="btn btn-danger" (click)='startTimer()'>Start Timer</button>
+
+
+
+<p>{{timeLeft}} Seconds Left....</p>
+<div class="container" style="background-color:ghostwhite; margin-top: 100px">
+
+  <div class="container-fluid">
+
+    <div class="row"><br>
+
+      <h2>{{ i + '.  ' + que2[this.i - 1].question}}</h2><br>
+
+      <button class="btn btn-default" style="background-color:lightseagreen;color:white" (click)=" hh() ">{{ que2[this.i - 1].correct_answer }}</button>
+
+      <button  class="btn btn-default" style="background-color:lightseagreen;color:white;margin-left:10px">{{  que2[this.i -1 ].incorrect_answers | slice:0:1 }}</button>&nbsp;
+      <button  class="btn btn-default" style="background-color:lightseagreen;color:white;margin-left:10px">{{  que2[this.i -1 ].incorrect_answers | slice:1:2 }}</button>
+      <button  class="btn btn-default" style="background-color:lightseagreen;color:white;margin-left:10px">{{  que2[this.i -1 ].incorrect_answers | slice:2:3 }}</button><br><hr>
+
+    </div>
+
+  </div>
+
+</div>
+<div class="row" style="margin-top: 100px">
+  <div class="col-md-6" align="center">
+    <button class="btn btn-success" [disabled]="this.u!= true" (click)="kk()">Next</button>
+    <button class="btn btn-danger" style="margin-left: 10px " (click)="jj()">Finish</button>
+  </div>
+  <div  class="col-md-6">
+    <h3 style="color: red">{{'Your Score Is ' + count2 + '/10 '}}</h3>
+  </div>
+</div>
+

@@ -1,0 +1,25 @@
+<div class="container-fluid">
+
+  <div class="row" style="background-color:teal">
+
+    <h1 class="text-center" style="color:white">Quiz&nbsp;<img src="https://img.icons8.com/clouds/100/000000/ask-question.png"></h1>
+
+  </div>
+
+</div><br>
+<div class="container">
+<div class="row">
+  <div class="col-md-12 text-center">
+    <h3 class="label label-primary " style="font-size: 25px"> Select Category</h3>
+  </div>
+</div>
+</div>
+<div class="container" style=" margin-top: 10px ; background-color: lightblue" >
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12" *ngFor="let d of cat" style="padding-top: 50px">
+      <button class="btn btn-default " (click)="getAllque(d.id)"> {{d.name }} </button><br><br><hr>
+    </div>
+  </div>
+</div>
+</div>
